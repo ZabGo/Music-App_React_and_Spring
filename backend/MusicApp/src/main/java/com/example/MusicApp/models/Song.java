@@ -16,15 +16,15 @@ public class Song {
 
     @Column(name = "url")
     private String url;
-
-    @ManyToOne
-    @JoinColumn(name = "task_id", nullable = false)
-    private Task task;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "task_id", nullable = false)
+//    private Task task;
 
     public Song(String title, String url) {
         this.title = title;
         this.url = url;
-        this.task = task;
+//        this.task = task;
     }
 
     public Song() {}

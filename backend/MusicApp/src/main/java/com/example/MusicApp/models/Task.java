@@ -20,8 +20,8 @@ public class Task {
     @Column(name = "time")
     private int time;
 
-    @OneToMany(mappedBy = "task", fetch = FetchType.LAZY)
-    private List<Song> songs;
+//    @OneToMany(mappedBy = "task", fetch = FetchType.LAZY)
+//    private List<Song> songs;
 
     @ManyToOne
     @JoinColumn(name = "session_id", nullable = false)
@@ -31,7 +31,7 @@ public class Task {
         this.name = name;
         this.time = time;
         this.content = content;
-        this.songs = songs;
+//        this.songs = songs;
         this.session = session;
     }
 
@@ -59,13 +59,13 @@ public class Task {
         this.content = content;
     }
 
-    public List<Song> getSongs() {
-        return songs;
-    }
-
-    public void setSongs(List<Song> songs) {
-        this.songs = songs;
-    }
+//    public List<Song> getSongs() {
+//        return songs;
+//    }
+//
+//    public void setSongs(List<Song> songs) {
+//        this.songs = songs;
+//    }
 
     public int getTime() {
         return time;
