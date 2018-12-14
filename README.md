@@ -34,7 +34,7 @@ Add graphs so that the user can see progress.
 
 ## Technologies
 
-### frameworks:
+### Frameworks:
 
 * Spring (backend)
 * React (frontend)
