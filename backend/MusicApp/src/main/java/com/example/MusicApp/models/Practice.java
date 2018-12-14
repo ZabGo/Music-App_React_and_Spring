@@ -5,8 +5,8 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "sessions")
-public class Session {
+@Table(name = "practices")
+public class Practice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,10 +18,10 @@ public class Session {
     @Column(name = "time")
     private int time;
 
-    @OneToMany(mappedBy = "session", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "practice", fetch = FetchType.LAZY)
     private List<Task> tasks;
 
-    public Session(String name, int time) {
+    public Practice(String name, int time) {
         this.name = name;
         this.time = time;
         this.tasks = tasks;

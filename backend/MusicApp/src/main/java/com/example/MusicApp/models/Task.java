@@ -1,7 +1,6 @@
 package com.example.MusicApp.models;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "tasks")
@@ -25,14 +24,14 @@ public class Task {
 
     @ManyToOne
     @JoinColumn(name = "session_id", nullable = false)
-    private Session session;
+    private Practice practice;
 
-    public Task(String name, int time, String content, Session session) {
+    public Task(String name, int time, String content, Practice practice) {
         this.name = name;
         this.time = time;
         this.content = content;
 //        this.songs = songs;
-        this.session = session;
+        this.practice = practice;
     }
 
     public Long getId() {
@@ -75,11 +74,11 @@ public class Task {
         this.time = time;
     }
 
-    public Session getSession() {
-        return session;
+    public Practice getPractice() {
+        return practice;
     }
 
-    public void setSession(Session session) {
-        this.session = session;
+    public void setPractice(Practice practice) {
+        this.practice = practice;
     }
 }
