@@ -16,11 +16,15 @@ The user can add, edit and delete a session that contains several tasks.
 
 ## Extensions
 
-category can be added to a song so the user can search songs by category.
+Category can be added to a song so the user can search songs by category.
+
 Timer can be added for a task.
+
 User can create a playlist of videos.
-User can add metronome to practice
-User can add audio file to the app
+
+User can add metronome to practice.
+
+User can add audio file to the app.
 
 ## Further Extensions
 
