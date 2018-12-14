@@ -8,7 +8,7 @@ The app will help musicians to organise their practice routine. The app is like 
 
 ## MVP
 
-The user must be able to add, edit and remove youtube videos.
+The user can add, edit and remove youtube videos.
 
 The user can add, edit and remove tasks.
 
@@ -25,3 +25,18 @@ User can add audio file to the app
 ## Further Extensions
 
 Add graphs so that the user can see progress.
+
+---------
+
+## Technologies
+
+### frameworks:
+
+* Spring (backend)
+* React (frontend)
+
+### Libraries and API
+
+* Youtube API
+* ReactPlayer
+* Google Calendar
