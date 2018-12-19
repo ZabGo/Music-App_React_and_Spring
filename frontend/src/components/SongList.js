@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
 import Song from './Song.js';
 import Request from '../helper/request.js';
+import {Link} from 'react-router-dom';
 
 const SongList = (props) => {
+// 	if(!props.song){
+// 	return null;
+// }
+
 	const songs = props.songs.map((song) => {
-		 	return (
-				<li key={song.id} className="song-item">
-					<div className = "component">
-				<Song song={song} />
-			</div>
-			</li>
+		console.log("SongList song: ", song.id);
+		return (
+					<div key={song.id} className = "list-item">
+						<Link to = {"/songs/" + song.id} className="noLine">
+							<Song song={song} />
+						</Link>
+					</div>
 		)
 		})
 
 	return (
-		<ul className="component-list">
+		<div className="component-list">
 	    {songs}
-	  </ul>
+	  </div>
 
 	)
 }

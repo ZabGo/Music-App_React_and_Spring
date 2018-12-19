@@ -1,7 +1,13 @@
 package com.example.MusicApp.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "songs")
@@ -16,18 +22,27 @@ public class Song {
 
     @Column(name = "url")
     private String url;
-//
-//    @ManyToOne
-//    @JoinColumn(name = "task_id", nullable = false)
-//    private Task task;
+
+    @JsonIgnoreProperties("songs")
+    @ManyToMany
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinTable(
+
+            joinColumns = {@JoinColumn(name = "song_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "task_id", nullable = false, updatable = false)}
+    )
+    private List<Task> tasks;
+
 
     public Song(String title, String url) {
         this.title = title;
         this.url = url;
-//        this.task = task;
+        this.tasks = new ArrayList<>();
     }
 
-    public Song() {}
+    public Song(){
+
+    }
 
     public Long getId() {
         return id;
@@ -51,5 +66,17 @@ public class Song {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public List<Task> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
+    }
+
+    public void addTask(Task task){
+        this.tasks.add(task);
     }
 }
