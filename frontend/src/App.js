@@ -1,19 +1,22 @@
 import React, { Component, Fragment } from 'react';
-import SongContainer from './containers/SongContainer.js';
-import SongFormContainer from './containers/SongFormContainer.js';
-import TaskContainer from './containers/TaskContainer.js';
+import { BrowserRouter as Router, Route} from "react-router-dom";
+
 import NavBar from './components/NavBar.js';
 import Home from './components/Home.js';
-import Task from './components/Task.js';
-import SingleSongContainer from './containers/SingleSongContainer.js';
-import { BrowserRouter as Router, Route} from "react-router-dom";
-import SingleTaskContainer from './containers/SingleTaskContainer.js'
-import TaskFormContainer from './containers/TaskFormContainer.js';
-import SongEditFormContainer from './containers/SongEditFormContainer.js';
-import TaskEditFormContainer from './containers/TaskEditFormContainer.js';
 import Header from './components/Header.js';
 import './reset.css';
 import './App.css';
+
+import SongContainer from './containers/songContainers/SongContainer.js';
+import SongFormContainer from './containers/songContainers/SongFormContainer.js';
+import SingleSongContainer from './containers/songContainers/SingleSongContainer.js';
+import SongEditFormContainer from './containers/songContainers/SongEditFormContainer.js';
+
+import TaskEditFormContainer from './containers/taskContainers/TaskEditFormContainer.js';
+import TaskContainer from './containers/taskContainers/TaskContainer.js';
+import Task from './components/taskComponents/Task.js';
+import SingleTaskContainer from './containers/taskContainers/SingleTaskContainer.js'
+import TaskFormContainer from './containers/taskContainers/TaskFormContainer.js';
 
 class App extends Component {
   render() {

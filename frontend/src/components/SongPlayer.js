@@ -70,8 +70,9 @@ ref = player => {
 
     const { url, playing, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
     return (
-      <div>
+      <div   className="video-player">
       <ReactPlayer
+
         ref={this.ref}
         className='react-player'
         width='100%'
@@ -95,7 +96,7 @@ ref = player => {
         onError={e => console.log('onError', e)}
         onProgress={this.onProgress}
         onDuration={this.onDuration}
-        className="video"
+
       />
       <div className="buttons">
       <button onClick={this.stop} >Stop</button>
