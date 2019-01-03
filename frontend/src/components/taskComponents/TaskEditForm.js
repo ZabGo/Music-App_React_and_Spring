@@ -48,7 +48,7 @@ console.log("event:", event);
     "songs": [...this.state.songsOptions].filter((song) => {
           return this.checkIfSongAlreadyAddedToTask(song.tasks)
         }).map((song) => {
-          console.log("TaskEditForm task id:", song.tasks);
+          console.log("TaskEditForm task id:", song.value);
           return song.value
         })
       }

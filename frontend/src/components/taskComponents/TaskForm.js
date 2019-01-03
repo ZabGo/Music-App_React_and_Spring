@@ -47,7 +47,7 @@ class TaskForm extends Component{
         // console.log("taskOptions - task", task);
         return(
           <div className="list-item">
-            <input key={index} id={song.title} type="checkbox" value={song._links.self.href} placeholder = "songs" name="songs" onChange={this.handleCheckboxChange} />
+            <input key={index} id={song.id} type="checkbox" value={song._links.self.href} placeholder = "songs" name="songs" checked={this.isChecked} onChange={this.handleCheckboxChange} />
             <label htmlFor={song.title}>{song.title}</label>
           </div>);
         });

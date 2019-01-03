@@ -14,6 +14,7 @@ console.log("Task  id ", props.task.id);
       {/* <div className="songDetails"> */}
         <div className="task-title"> {props.task.name}</div>
         <div className="task-time">Time: {props.task.time} minutes</div>
+
       {/* </div> */}
     </React.Fragment>
   );

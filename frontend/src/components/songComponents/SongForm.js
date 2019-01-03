@@ -25,7 +25,7 @@ class SongForm extends Component{
       "url": event.target.url.value,
       "tasks": [...event.target.tasks].filter((task) => {
         console.log("SongForm - map - task", task);
-        console.log("SongForm - map - task", task.value);
+        console.log("SongForm - map - task - checked", task.checked);
           return task.checked
         }).map((task) => {
           return task.value;
@@ -42,10 +42,10 @@ class SongForm extends Component{
   render(){
 
     const taskOptions = this.props.tasks.map((task, index) => {
-      console.log("taskOptions - task", task);
+      console.log("taskOptions - task", task.id);
       return(
         <div className="list-item">
-          <input key={index} id={task.name} type="checkbox" value={task._links.self.href} placeholder = "tasks" name="tasks" onChange={this.handleCheckboxChange} />
+          <input key={index} id={task.id} type="checkbox" value={task._links.self.href} placeholder = "tasks" name="tasks" checked={this.isChecked} onChange={this.handleCheckboxChange} />
           <label htmlFor={task.name}>{task.name}</label>
         </div>);
       });

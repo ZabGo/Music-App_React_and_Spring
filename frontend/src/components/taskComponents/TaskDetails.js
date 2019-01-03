@@ -38,6 +38,7 @@ const onEdit = () => {
       <div className="Songs">
         {songs}
       </div>
+      <div>{props.task.content}</div>
       <button onClick={onDelete} className="button-delete">Delete Task</button>
       <button onClick={onEdit} className="button-edit">Edit Task</button>
       </React.Fragment>

@@ -29,23 +29,23 @@ public class DataLoader implements ApplicationRunner {
 //        Practice practice = new Practice("session1", 45);
 //        practiceRepository.save(practice);
 
-        Task task1 = new Task("task1", 5, "task1");
+        Task task1 = new Task("Arpeggio", 10, "learn A m7 and C M7");
         taskRepository.save(task1);
 //
-        Song song1 = new Song("song1", "https://www.youtube.com/watch?v=8JvyxKJToJs");
+        Song song1 = new Song("Hoochie Coochie Man", "https://www.youtube.com/watch?v=U5QKpsVzndc");
         songRepository.save(song1);
 
-        song1.addTask(task1);
-        songRepository.save(song1);
+//        song1.addTask(task1);
+//        songRepository.save(song1);
 
 //        task1.addSong(song1);
 //        taskRepository.save(task1);
 
 
-        Task task2 = new Task("task2", 5, "new arpeggio");
+        Task task2 = new Task("Come Together work on the chorus", 5, "work on the chorus");
         taskRepository.save(task2);
 //
-        Song song2 = new Song("song2", "https://www.youtube.com/watch?v=8JvyxKJToJs");
+        Song song2 = new Song("Come Together", "https://www.youtube.com/watch?v=c6yYxyxx4aE");
         songRepository.save(song2);
 //
 //        song2.addTask(task2);
@@ -53,59 +53,30 @@ public class DataLoader implements ApplicationRunner {
 
         task2.addSong(song2);
         taskRepository.save(task2);
-//
-//        taskRepository.save(task1);
-////
-//
-//
 
-//
+        Song song3 = new Song("Money - Original song", "https://www.youtube.com/watch?v=cpbbuaIA3Ds");
+        songRepository.save(song3);
 
+        Song song4 = new Song("Money - Tutorial", "https://www.youtube.com/watch?v=-Mc7OKu9o0g&t=302s");
+        songRepository.save(song4);
 
-
-
-
-
-
-
-//        Task task2 = new Task("Work scale", 10, "new scale in G7");
-//        Task task3 = new Task("Work Song", 15, "new song");
+        Task task3 = new Task("Learn Money by Pink Floyd", 10, "work on the verse");
+        taskRepository.save(task3);
 //
-//
-//
-//
-//
-
-//
-//
-//
-//
-//        Song song2 = new Song("Stone River", "https://www.youtube.com/watch?v=iFOzPY_ZF0c");
-//
-//
-//        Song song3 = new Song("Mannish Boy", "https://www.youtube.com/watch?v=bSfqNEvykv0");
-//
-//
-////        Song song4 = new Song("Little Wing", "https://www.youtube.com/watch?v=An4uDegHB8s");
-//
-//        song1.setTask(task1);
-//        song2.setTask(task2);
-//        song3.setTask(task3);
-//
-//
-//
-//        task1.addSong(song1);
-//        task2.addSong(song2);
-//        task3.addSong(song3);
-
-//        songRepository.save(song1);
+//        song3.addTask(task3);
 //        songRepository.save(song3);
 //
-//        songRepository.save(song2);
-//
-//        taskRepository.save(task1);
-//        taskRepository.save(task2);
+//        song4.addTask(task3);
+//        songRepository.save(song4);
+
+        task3.addSong(song3);
+        task3.addSong(song4);
+        taskRepository.save(task3);
+
+
 //        taskRepository.save(task3);
+
+
 
 
 
